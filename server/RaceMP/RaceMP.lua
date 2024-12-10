@@ -1,4 +1,6 @@
 -- RaceMP (Server)
+-- By Dudekahedron and Funky7Monkey
+-- Modified by Xevrac
 
 local settings = {}
 --[[
