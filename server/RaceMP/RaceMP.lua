@@ -130,8 +130,8 @@ function addCurrentPostition(pTable)
 end
 
 local function raceEnd(player, position)
-    print(MP.GetPlayerName(player) .. " finished")
-    MP.SendChatMessage(-1, MP.GetPlayerName(player) .. " finished")
+    print(MP.GetPlayerName(player) .. " has finished the race.")
+    MP.SendChatMessage(-1, MP.GetPlayerName(player) .. " has finished the race.")
     local send = {
         ['trigger'] = 'ChangeState',
         ['state'] = 'scenario-start',
@@ -252,7 +252,7 @@ end
 print(" ")
 print(" /////////////////////////////////////////////////////////")
 print(" ")
-print(" ** RaceMP " .. raceMp_VERSION .. " has loaded successfully.")
+print(" ** RaceMP " .. raceMp_VERSION .. " has initialized successfully.")
 print(" ** Created by Dudekahedron, Funky7Monkey")
 print(" ** Modified by Xevrac")
 print(" ")
