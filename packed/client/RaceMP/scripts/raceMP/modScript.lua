@@ -1,0 +1,2 @@
+queueExtensionToLoad('RaceMP')
+queueExtensionToLoad('GUI')
