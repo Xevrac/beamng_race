@@ -1,2 +1,0 @@
-queueExtensionToLoad('RaceMP')
-queueExtensionToLoad('GUI')
