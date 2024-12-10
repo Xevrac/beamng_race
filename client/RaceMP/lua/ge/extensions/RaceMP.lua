@@ -223,6 +223,16 @@ local function onWorldReadyState()
 end
 
 local function onExtensionLoaded()
+    print(" ")
+    print(" /////////////////////////////////////////////////////////")
+    print(" ")
+    print(" ** RaceMP " .. raceMp_VERSION .. " has initialized successfully.")
+    print(" ** Created by Dudekahedron, Funky7Monkey")
+    print(" ** Modified by Xevrac")
+    print(" ")
+    print(" /////////////////////////////////////////////////////////")
+    print(" ")
+
     log('I', logTag, "RaceMP Loaded")
 end
 
