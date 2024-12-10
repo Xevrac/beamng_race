@@ -5,7 +5,7 @@
 local M = {}
 
 local raceMp_VERSION = "v0.3.07-aea40f0"
-local raceName = "Xevnet - RaceMP - " .. raceMp_VERSION ..
+local raceName = "Xevnet - RaceMP - " .. raceMp_VERSION
 local logTag = "xnet.racemp"
 
 M.dependencies = {"ui_imgui"}
