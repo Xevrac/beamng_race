@@ -10,6 +10,7 @@ local settings = {}
 ]]
 
 local players = {}
+local raceMp_VERSION = "v0.3.07-aea40f0"
 
 local function prettyTime(seconds)
     local thousandths = seconds * 1000
@@ -176,7 +177,7 @@ end
 
 function onChatMessage(senderID, name, message)
     if message == "/start" then
-        MP.SendChatMessage(-1, "Race is about to start!")
+        MP.SendChatMessage(-1, "The race is starting!")
         MP.TriggerGlobalEvent("onCountdown")
         return 1
     elseif message == "/list"   then
@@ -248,8 +249,15 @@ function clientRaceMPLoaded(player)
     players[player] = {['name'] = MP.GetPlayerName(player), ['splits'] = 0}
 end
 
-print("RaceMP loaded")
-
+print(" ")
+print(" /////////////////////////////////////////////////////////")
+print(" ")
+print(" ** RaceMP " .. raceMp_VERSION .. " has loaded successfully.")
+print(" ** Created by Dudekahedron, Funky7Monkey")
+print(" ** Modified by Xevrac")
+print(" ")
+print(" /////////////////////////////////////////////////////////")
+print(" ")
 
 MP.RegisterEvent("onLapStart", "lapStart")
 MP.RegisterEvent("onLapStop", "lapStop")
