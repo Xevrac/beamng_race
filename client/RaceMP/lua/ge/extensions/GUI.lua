@@ -181,11 +181,11 @@ local function onExtensionLoaded()
     gui_module.initialize(gui)
     gui.registerWindow(raceName, im.ImVec2(512, 256))
     gui.showWindow(raceName)
-    log('I', logTag, "Xevnet Standings Loaded")
+    log('I', logTag, "Xevnet RaceMP Loaded")
 end
 
 local function onExtensionUnloaded()
-    log('I', logTag, "Xevnet Standings Unloaded")
+    log('I', logTag, "Xevnet RaceMP Unloaded")
 end
 
 AddEventHandler("clientRaceboardData", clientRaceboardData)
