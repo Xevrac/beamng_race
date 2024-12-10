@@ -154,6 +154,8 @@ end
 local function drawRaceboard()
     gui.setupWindow(raceName)
     im.Begin(raceName)
+
+    -- Draw race statistics
     for _,player in pairs(statisitcs) do
         if player['position'] then
             --im.Text(player['position'] .. ": " .. player['name'] .. ": " .. player['lastTime'])
@@ -170,6 +172,17 @@ local function onUpdate(dt)
             drawRaceboard()
         end
     end
+
+    -- Footer logic
+    local footerText = "Modified by Xevrac | Discord: https://xevnet.au"
+    local padding = 10 -- Adjust as needed for spacing
+    local footerHeight = im.CalcTextSize(footerText).y + padding
+    local windowHeight = im.GetWindowHeight()
+    local cursorPosY = windowHeight - footerHeight
+
+    im.SetCursorPosY(cursorPosY)
+    im.Separator() -- Add a line before the footer for separation
+    im.Text(footerText)
 end
 
 local function onWorldReadyState()
