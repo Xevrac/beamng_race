@@ -96,7 +96,7 @@ local function onLapStart()
         currentSplits = {}
         checkpointTimes.startStop = lapStart
         checkpointTimes.startTimeStamp = os.time()
-        guihooks.trigger('toastrMsg', {type="info", title = "Lap Started!", msg = "Drive through all checkpoints to log a time!", config = {timeOut = 2500 }})
+        guihooks.trigger('toastrMsg', {type="info", title = "Timer started", msg = "Complete lap to log time.", config = {timeOut = 2500 }})
         local data = jsonEncode( { ["startStop"] = checkpointTimes.startStop, ["startTimeStamp"] = checkpointTimes.startTimeStamp } )
         log('D', logTag, data)
         TriggerServerEvent("onLapStart", data)
@@ -126,7 +126,7 @@ local function onLapStop()
         local missedCheckpoints = checkpointCount - tableLength(verifySplits)
         log('D', logTag, "Missed: " .. missedCheckpoints .. " Count: " .. tableLength(verifySplits))
         if missedCheckpoints ~= 0 then
-            guihooks.trigger('toastrMsg', {type="error", title = "Lap Incomplete!", msg = "You must pass through all checkpoints to log an official time!", config = {timeOut = 2500 }})
+            guihooks.trigger('toastrMsg', {type="error", title = "Timer stopped", msg = "You must complete a full lap correctly to save official time.", config = {timeOut = 2500 }})
             penalty = penalty + 1
         end
         stopTime = timer
@@ -135,7 +135,7 @@ local function onLapStop()
         checkpointTimes.stopTimeStamp = os.time()
         verifySplits = {}
         local prettyLapTime = prettyTime(lapTime)
-        guihooks.trigger('toastrMsg', {type="info", title = "Great Lap!", msg = "Your Lap Time was: " .. prettyLapTime, config = {timeOut = 5000 }})
+        guihooks.trigger('toastrMsg', {type="info", title = "Timer marked", msg = "Lap: " .. prettyLapTime, config = {timeOut = 5000 }})
         lapActive = false
         local data = jsonEncode( { ["lapTime"] = lapTime, ["currentSplits"] = currentSplits, ['penalty'] = penalty } )
         log('D', logTag, data)
@@ -147,7 +147,7 @@ end
 
 local function onLapOutOfBounds()
     if lapActive then
-        guihooks.trigger('toastrMsg', {type="warning", title = "Out Of Bounds!", msg = "You may continue but the lap time will be marked with a penalty!", config = {timeOut = 5000 }})
+        guihooks.trigger('toastrMsg', {type="warning", title = "Penalty", msg = "Penalty incurred, you went out of bounds.", config = {timeOut = 5000 }})
         penalty = penalty + 1
     end
 end
@@ -155,7 +155,7 @@ end
 local function onVehicleResetted(gameVehicleID)
     if MPVehicleGE.isOwn(gameVehicleID) then
         if lapActive then
-            guihooks.trigger('toastrMsg', {type="error", title = "Time Forfeit!", msg = "You may continue but checkpoints are not active for this lap!", config = {timeOut = 2500 }})
+            guihooks.trigger('toastrMsg', {type="error", title = "Timer forfeit", msg = "Proceed, however no active timer for this lap.", config = {timeOut = 2500 }})
             lapActive = false
         end
     end
