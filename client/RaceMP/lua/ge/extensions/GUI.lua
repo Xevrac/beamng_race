@@ -1,9 +1,12 @@
 -- Raceboard (Client)
+-- By Dudekahedron and Funky7Monkey
+-- Modified by Xevrac
 
 local M = {}
 
-local raceName = "Xevnet - Standings"
-local logTag = "xnet.standings"
+local raceMp_VERSION = "v0.3.07-aea40f0"
+local raceName = "Xevnet - RaceMP - " .. raceMp_VERSION ..
+local logTag = "xnet.racemp"
 
 M.dependencies = {"ui_imgui"}
 local gui_module = require("ge/extensions/editor/api/gui")
