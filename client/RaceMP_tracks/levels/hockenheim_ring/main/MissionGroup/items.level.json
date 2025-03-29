@@ -1,0 +1,11 @@
+{"name":"sky_and_sun","class":"SimGroup","persistentId":"ffd4b1ab-a9ce-437a-8615-be48b629db10","__parent":"MissionGroup"}
+{"name":"CameraBookmarks","class":"SimGroup","persistentId":"2d2a6db5-8f3d-4981-b2b6-ac30efe8d6d6","__parent":"MissionGroup"}
+{"name":"Water","class":"SimGroup","persistentId":"c94a89c2-2848-4b6d-801c-7548a0a0b540","__parent":"MissionGroup"}
+{"name":"PlayerDropPoints","class":"SimGroup","persistentId":"ccd8ff32-a244-426c-904d-d820ef26fff7","__parent":"MissionGroup","enabled":"1"}
+{"name":"AIWaypointsGroup","class":"SimGroup","persistentId":"a41dd8ba-a4f1-438a-907b-ae46f9430d19","__parent":"MissionGroup"}
+{"name":"AIDecalWaypointsGroup","class":"SimGroup","persistentId":"adaadf2a-cfb3-427f-b742-78d6cfa3f41a","__parent":"MissionGroup"}
+{"class":"TSStatic","persistentId":"5b8b6991-7309-4411-be49-a1e306de44fb","__parent":"MissionGroup","position":[0,0,185],"isRenderEnabled":false,"shapeName":"/levels/hockenheim_ring/art/shapes/imported/colmesh.dae","useInstanceRenderData":true}
+{"class":"TSStatic","persistentId":"e3ccf358-5330-4509-9c71-ac407a1143b9","__parent":"MissionGroup","position":[0,0,185],"isRenderEnabled":false,"shapeName":"/levels/hockenheim_ring/art/shapes/imported/map.dae","useInstanceRenderData":true}
+{"class":"SkyBox","persistentId":"e5578a1c-eed6-416d-bbba-580182018f21","__parent":"MissionGroup","material":"hock_skybox"}
+{"name":"mp_cell_tower_group","class":"SimGroup","__parent":"MissionGroup"}
+{"name":"RaceMP","class":"SimGroup","__parent":"MissionGroup"}
